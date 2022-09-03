@@ -32,6 +32,17 @@ deploy:
     on: 
       all_branches: true # permit all branches
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: jinho-webserver-build # s3 bucket
+    key: sijangtong-server.zip
+    bundle_type: zip
+    application: jinho-webservice-ec2
+    deployment_group: jinho-webservice-ec2-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 # notificate by email
 notifications: 
   email:
