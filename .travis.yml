@@ -22,7 +22,7 @@ before_deploy:
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # from Travis repo setting
-    secrest_access_key: $AWS_SECRET_KEY # from Travis repo
+    secret_access_key: $AWS_SECRET_KEY # from Travis repo
     bucket: jinho-webserver-build # S3 bucket
     region: ap-northeast-2
     skip_cleanup: true
