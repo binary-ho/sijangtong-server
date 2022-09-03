@@ -30,6 +30,7 @@ deploy:
     local_dir: deploy # dir made before deploy
     wait-until-deployed: true
 
+# notificate by email
 notifications: 
   email:
     recipients:
