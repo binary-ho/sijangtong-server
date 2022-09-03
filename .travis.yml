@@ -42,6 +42,8 @@ deploy:
     deployment_group: jinho-webservice-ec2-group
     region: ap-northeast-2
     wait-until-deployed: true
+    on:
+      all_branches: true
 
 # notificate by email
 notifications: 
