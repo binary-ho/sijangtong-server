@@ -29,6 +29,8 @@ deploy:
     acl: private # access zip file private
     local_dir: deploy # dir made before deploy
     wait-until-deployed: true
+    on: 
+      all_branches: true # permit all branches
 
 # notificate by email
 notifications: 
