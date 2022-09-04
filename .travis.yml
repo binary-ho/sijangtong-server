@@ -20,7 +20,7 @@ before_deploy:
   - sudo cp scripts/deploy.sh before-deploy/
   - sudo cp appspec.yml before-deploy/
   - sudo cp build/libs/*.jar before-deploy/
-  - sudo cd before-deploy
+  - cd before-deploy
   - sudo zip -r before-deploy *
   - cd ../
   - sudo mkdir -p deploy
