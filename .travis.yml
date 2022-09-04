@@ -20,10 +20,10 @@ before_deploy:
   - sudo cp scripts/deploy.sh before-deploy/
   - sudo cp appspec.yml before-deploy/
   - sudo cp build/libs/*.jar before-deploy/
-  - cd before-deploy
-  - zip -r before-deploy *
+  - sudo cd before-deploy
+  - sudo zip -r before-deploy *
   - cd ../
-  - mkdir -p deploy
+  - sudo mkdir -p deploy
   - sudo mv before-deploy/before-deploy.zip deploy/sijangtong-server.zip
 
     #  - zip -r sijangtong-server *
