@@ -17,7 +17,7 @@ script: "./gradlew clean build"
 before_deploy:
   - sudo mkdir -p before-deploy
   - pwd
-  - sudo cp ../scripts/deploy.sh before-deploy/
+  - sudo cp scripts/deploy.sh before-deploy/
   - sudo cp appspec.yml before-deploy/
   - sudo cp build/libs/*.jar before-deploy/
   - cd before-deploy && zip -r before-deploy *
