@@ -34,7 +34,10 @@ chmod +x $JAR_NAME
 # chmod +x $REPOSITORY/nohup.out
 
 echo "> JAR Name: $JAR_NAME"
+ll
+echo "> cd .........."
 cd ..
+ll
 pwd
 sudo nohup java -jar \
     -Dspring.config.location=classpath:/application.properties \ 
