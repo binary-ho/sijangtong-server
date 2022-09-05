@@ -35,7 +35,7 @@ chmod +x $JAR_NAME
 
 echo "> JAR Name: $JAR_NAME"
 ll
-echo "> cd .........."
+echo "> cd ..........eqreqrqereq"
 cd ..
 ll
 pwd
