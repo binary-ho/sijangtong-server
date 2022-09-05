@@ -33,7 +33,7 @@ JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 chmod +x $JAR_NAME
 
 echo "> JAR Name: $JAR_NAME"
-nohup java -jar \
+sudo nohup java -jar \
     -Dspring.config.location=classpath:/application.
 properties,classpath:/application-real.properties \ 
     -Dspring.profiles.active=real \
