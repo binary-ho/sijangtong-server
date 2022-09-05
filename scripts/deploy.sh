@@ -29,8 +29,8 @@ fi
 
 echo "> deploy new Application"
 
-JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
-chmod +x $JAR_NAME
+sudo JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
+sudo chmod +x $JAR_NAME
 
 echo "> JAR Name: $JAR_NAME"
 sudo nohup java -jar \
