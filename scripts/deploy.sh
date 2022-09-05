@@ -4,7 +4,7 @@ REPOSITORY=/home/ec2-user/app/step1
 PROJECT_NAME=sijangtong-server
 PROJECT_NAME2=sijangtong-client
 
-sudo cp $REPOSITORY/zip/*.jar $REPOSITORY/
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> check Server Application pid $PROJECT_NAME"
 CURRENT_PID=$(pgrep -fl $PROJECT_NAME | grep jar)
@@ -34,12 +34,12 @@ chmod +x $JAR_NAME
 # chmod +x $REPOSITORY/nohup.out
 
 echo "> JAR Name: $JAR_NAME"
-
+cd ..
 sudo nohup java -jar \
     -Dspring.config.location=classpath:/application.properties \ 
     -Dspring.profiles.active=real \
-    /home/ec2-user/app/step1/sijangtong-0.0.1-SNAPSHOT-plain.jar > $REPOSITORY/nohup.out 2>&1 &
-# sudo nohup java -jar $JAR_NAME 2>&1 &
+    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+    #nohup java -jar $JAR_NAME 2>&1 &
 
 # ,classpath:/application-real.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real-db.properties \
 
