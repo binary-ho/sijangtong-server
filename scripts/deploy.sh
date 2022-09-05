@@ -29,7 +29,7 @@ fi
 
 echo "> deploy new Application"
 
-sudo JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 chmod +x $JAR_NAME
 
 echo "> JAR Name: $JAR_NAME"
