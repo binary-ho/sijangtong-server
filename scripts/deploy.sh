@@ -31,13 +31,14 @@ echo "> deploy new Application"
 
 JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 chmod +x $JAR_NAME
+chmod +x $REPOSITORY/nohup.out
 
 echo "> JAR Name: $JAR_NAME"
 
 sudo nohup java -jar \
     -Dspring.config.location=classpath:/application.properties \ 
     -Dspring.profiles.active=real \
-    sudo $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+    $JAR_NAME sudo > $REPOSITORY/nohup.out 2>&1 &
 # sudo nohup java -jar $JAR_NAME 2>&1 &
 
 # ,classpath:/application-real.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real-db.properties \
