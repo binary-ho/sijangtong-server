@@ -30,6 +30,9 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
         // path for all out website connection
         // so, here i'm just giving it as 'ws'
         // 웹소켓 서버 엔드포인트를 설정한다.
-        registry.addEndpoint("/websocket").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/websocket")
+		.setAllowedOrigins("https://sijangtong.shop", "http://sijangtong.shop", "http://3.37.243.198:3000", "https://3.37.243.198:3000",  "http://ec2-3-37-243-198.ap-northeast-2.compute.amazonaws.com:3000", "https://ec2-3-37-243-198.ap-northeast-2.compute.amazonaws.com:3000")
+		//.setAllowedOriginPatterns("*")
+		.withSockJS();
     }
 }
